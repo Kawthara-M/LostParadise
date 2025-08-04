@@ -1,6 +1,6 @@
 # Lost Paradise Map
 
-**By:**  Kawthar | Yousef |
+**By:**  Kawthar | Yousef | Maryam <br>
 **Date:** August / 04/ 2025 
 
 
