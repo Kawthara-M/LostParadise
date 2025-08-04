@@ -18,7 +18,7 @@ exports.games_new_POST = async (req, res) => {
 }
 
 exports.games_edit_PUT = async (req, res) => {
-  if (!Game.findById(req.params.id)){
+  if (!Game.findById(req.params.id)) {
     return res.send("this game does not exist!")
   }
 
@@ -30,13 +30,26 @@ exports.games_edit_PUT = async (req, res) => {
     width: req.body.width,
     height: req.body.height,
   }
-  
+
   await Game.findByIdAndUpdate(req.params.id, req.body)
   return res.send(await Game.findById(req.params.id))
 }
 
-
-exports.games_delete_delete = async (req,res) =>{
+exports.games_delete_delete = async (req, res) => {
   await Game.findByIdAndDelete(req.params.id)
   return res.status(200).send("Game has been deleted successfully")
+}
+
+exports.games_search_GET = async (req, res) => {
+  let games = []
+  if (req.query.q) {
+    const searchQuery = req.query.q
+    games = await Game.find({
+      $or: [
+        { name: { $regex: searchQuery, $options: "i" } },
+        { description: { $regex: searchQuery, $options: "i" } },
+      ],
+    })
+  }
+  res.send(games)
 }
