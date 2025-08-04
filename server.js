@@ -1,7 +1,6 @@
 // imports
 const express = require('express')
 require('dotenv').config()
-const session = require('express-session')
 const path = require('path')
 
 
@@ -23,23 +22,16 @@ const morgan = require('morgan')
 
 
 // use MiddleWares
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(methodOverride('_method'))
-app.use(morgan('dev'))
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(methodOverride("_method"))
+app.use(morgan("dev"))
+app.use(express.static(path.join(__dirname, "public")))
 
 
 
-// Session Configurations
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true
-  })
-)
+// Require Routers
 
-//passUserToView middleware
 
 
 // Root Route
@@ -48,9 +40,11 @@ app.get('/', (req, res) => {
 })
 
 // Require Routers
+const gamesRouter = require("./routes/games")
 
 
 // use Routers
+app.use("/games",gamesRouter)
 
 
 // Listener

@@ -1,0 +1,72 @@
+[
+  {
+    "minimumAge": 3,
+    "minimumHeight": 70,
+    "description": "Classic carousel with colorful horses",
+    "capacity": 20,
+    "coordinates": {
+      "x": 100,
+      "y": 150
+    },
+    "dimentions": {
+      "width": 10,
+      "height": 15
+    }
+  },
+  {
+    "minimumAge": 5,
+    "minimumHeight": 90,
+    "description": "Mini roller coaster for kids",
+    "capacity": 12,
+    "coordinates": {
+      "x": 200,
+      "y": 250
+    },
+    "dimentions": {
+      "width": 20,
+      "height": 30
+    }
+  },
+  {
+    "minimumAge": 8,
+    "minimumHeight": 120,
+    "description": "Bumper cars arena",
+    "capacity": 15,
+    "coordinates": {
+      "x": 300,
+      "y": 100
+    },
+    "dimentions": {
+      "width": 25,
+      "height": 25
+    }
+  },
+  {
+    "minimumAge": 3,
+    "minimumHeight": 70,
+    "description": "Ferris wheel with enclosed cabins",
+    "capacity": 40,
+    "coordinates": {
+      "x": 400,
+      "y": 300
+    },
+    "dimentions": {
+      "width": 15,
+      "height": 50
+    }
+  },
+  {
+    "minimumAge": 6,
+    "minimumHeight": 100,
+    "description": "Spinning tea cups ride",
+    "capacity": 18,
+    "coordinates": {
+      "x": 150,
+      "y": 350
+    },
+    "dimentions": {
+      "width": 18,
+      "height": 18
+    }
+  }
+]
