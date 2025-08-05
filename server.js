@@ -3,12 +3,13 @@ const express = require('express')
 require('dotenv').config()
 const path = require('path')
 
-
 // Initialize app
 const app = express()
 
 // Database Configuration
 const mongoose = require('./config/db')
+app.engine("html", require("ejs").renderFile)
+app.set("view engine", "ejs")
 
 // set Port Configuration
 const port = process.env.PORT ? process.env.PORT : 3000

@@ -13,6 +13,7 @@ exports.games_new_POST = async (req, res) => {
     width: req.body.width,
     height: req.body.height,
   }
+  req.body.image = req.file.filename
 
   return res.send(await Game.create(req.body))
 }
