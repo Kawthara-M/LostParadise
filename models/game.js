@@ -28,6 +28,10 @@ const gameSchema = new mongoose.Schema({
   dimentions: {
     width:Number,
     height: Number
+  },
+  image: {
+    type:String,
+    required:true
   }
 
 }) 
