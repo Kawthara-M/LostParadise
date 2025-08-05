@@ -1,72 +1,82 @@
 [
   {
+    "name": "Roller Coaster",
+    "minimumAge": 12,
+    "minimumHeight": 140,
+    "description": "Thrilling high-speed roller coaster with loops and drops",
+    "capacity": 24,
+    "coordinates": {
+      "x": 150,
+      "y": 200
+    },
+    "dimentions": {
+      "width": 300,
+      "height": 100
+    },
+    "image": "roller_coaster.jpg"
+  },
+  {
+    "name": "Ferris Wheel",
     "minimumAge": 3,
     "minimumHeight": 70,
-    "description": "Classic carousel with colorful horses",
-    "capacity": 20,
-    "coordinates": {
-      "x": 100,
-      "y": 150
-    },
-    "dimentions": {
-      "width": 10,
-      "height": 15
-    }
-  },
-  {
-    "minimumAge": 5,
-    "minimumHeight": 90,
-    "description": "Mini roller coaster for kids",
-    "capacity": 12,
-    "coordinates": {
-      "x": 200,
-      "y": 250
-    },
-    "dimentions": {
-      "width": 20,
-      "height": 30
-    }
-  },
-  {
-    "minimumAge": 8,
-    "minimumHeight": 120,
-    "description": "Bumper cars arena",
-    "capacity": 15,
-    "coordinates": {
-      "x": 300,
-      "y": 100
-    },
-    "dimentions": {
-      "width": 25,
-      "height": 25
-    }
-  },
-  {
-    "minimumAge": 3,
-    "minimumHeight": 70,
-    "description": "Ferris wheel with enclosed cabins",
+    "description": "Classic Ferris wheel offering panoramic views of the park",
     "capacity": 40,
     "coordinates": {
       "x": 400,
       "y": 300
     },
     "dimentions": {
-      "width": 15,
-      "height": 50
-    }
+      "width": 150,
+      "height": 250
+    },
+    "image": "ferris_wheel.jpg"
   },
   {
-    "minimumAge": 6,
-    "minimumHeight": 100,
-    "description": "Spinning tea cups ride",
-    "capacity": 18,
+    "name": "Carousel",
+    "minimumAge": 3,
+    "minimumHeight": 80,
+    "description": "Traditional merry-go-round with beautifully decorated horses",
+    "capacity": 30,
     "coordinates": {
-      "x": 150,
-      "y": 350
+      "x": 250,
+      "y": 150
     },
     "dimentions": {
-      "width": 18,
-      "height": 18
-    }
+      "width": 200,
+      "height": 200
+    },
+    "image": "carousel.jpg"
+  },
+  {
+    "name": "Bumper Cars",
+    "minimumAge": 6,
+    "minimumHeight": 110,
+    "description": "Electric cars where drivers bump into each other for fun",
+    "capacity": 20,
+    "coordinates": {
+      "x": 350,
+      "y": 100
+    },
+    "dimentions": {
+      "width": 250,
+      "height": 150
+    },
+    "image": "bumper_cars.jpg"
+  },
+  {
+    "name": "Haunted House",
+    "minimumAge": 10,
+    "minimumHeight": 120,
+    "description": "Spooky walk-through attraction with surprises around every corner",
+    "capacity": 15,
+    "coordinates": {
+      "x": 500,
+      "y": 200
+    },
+    "dimentions": {
+      "width": 180,
+      "height": 300
+    },
+    "image": "haunted_house.jpg"
   }
 ]

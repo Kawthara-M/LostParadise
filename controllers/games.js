@@ -1,22 +1,42 @@
 const Game = require("./../models/game")
 
 exports.games_read_GET = async (req, res) => {
+    console.log("Rendering /games/new page");
   res.send(await Game.find())
+}
+exports.games_new_GET =async(req,res)=> {
+  res.render("./new.ejs")
 }
 
 exports.games_new_POST = async (req, res) => {
-  req.body.coordinates = {
-    x: req.body.x,
-    y: req.body.y,
-  }
-  req.body.dimentions = {
-    width: req.body.width,
-    height: req.body.height,
-  }
-  req.body.image = req.file.filename
+  try {
+  //  console.log("req.body:", req.body)
+   // console.log("req.file:", req.file)
 
-  return res.send(await Game.create(req.body))
+    if (!req.file) {
+      return res.status(400).send("Image upload is required.")
+    }
+
+    req.body.coordinates = {
+      x: req.body.x,
+      y: req.body.y,
+    }
+
+    req.body.dimentions = {
+      width: req.body.width,
+      height: req.body.height,
+    }
+
+    req.body.image = req.file.filename
+
+    const newGame = await Game.create(req.body)
+    res.send(newGame)
+  } catch (error) {
+    console.error("Upload error:", error)
+    res.status(500).send("Server error while creating game")
+  }
 }
+
 
 exports.games_edit_PUT = async (req, res) => {
   if (!Game.findById(req.params.id)) {

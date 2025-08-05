@@ -1,25 +1,16 @@
 // imports
-<<<<<<< HEAD
 const express = require('express')
 require('dotenv').config()
 const path = require('path')
 const cors = require("cors")
-=======
-const express = require("express")
-require("dotenv").config()
-const path = require("path")
-const cors = require("cors")
 
->>>>>>> 0fd275f013d209860aef26736013510ae7e4ce50
 // Initialize app
 const app = express()
-
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
 // Database Configuration
-<<<<<<< HEAD
 const mongoose = require('./config/db')
-=======
-const mongoose = require("./config/db")
->>>>>>> 0fd275f013d209860aef26736013510ae7e4ce50
+
 
 // set Port Configuration
 const port = 3001
