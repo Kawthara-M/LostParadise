@@ -1,6 +1,6 @@
-# Lost Paradise Map
+# Lost Paradise Map - Backend Repository -
 
-**By:**  Kawthar | Yousef | Maryam <br>
+**By:**  Kawthar | Yousif | Maryam <br>
 **Date:** August / 04/ 2025 
 
 
@@ -13,13 +13,12 @@
 
 
 ## Technologies Used
-
-
-
+- Node.js
+- Express
+- MongoDB
 
 ## Wireframes
-
-
+[Figma](https://www.figma.com/design/eQpm9LEqGuuPoO9ntfZhDL/Untitled?node-id=6-28&t=bKcnm0YhdTzcQIr8-1)
 
 
 ### **Future Updates**
