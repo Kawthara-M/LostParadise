@@ -7,10 +7,10 @@ const cors = require("cors")
 const app = express()
 
 // Database Configuration
-const mongoose = require('./config/db')
+const mongoose = require("./config/db")
 
 // set Port Configuration
-const port = 3001
+const port = process.env.PORT || 3001
 
 // Require MiddleWares
 const methodOverride = require("method-override")
