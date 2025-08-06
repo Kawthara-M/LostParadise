@@ -14,7 +14,7 @@ exports.games_new_POST = async (req, res) => {
     height: req.body.height,
   }
   req.body.image = req.file.filename
-
+  
   return res.send(await Game.create(req.body))
 }
 
@@ -23,14 +23,7 @@ exports.games_edit_PUT = async (req, res) => {
     return res.send("this game does not exist!")
   }
 
-  req.body.coordinates = {
-    x: req.body.x,
-    y: req.body.y,
-  }
-  req.body.dimentions = {
-    width: req.body.width,
-    height: req.body.height,
-  }
+  req.body.image = req.file.filename
 
   await Game.findByIdAndUpdate(req.params.id, req.body)
   return res.send(await Game.findById(req.params.id))
